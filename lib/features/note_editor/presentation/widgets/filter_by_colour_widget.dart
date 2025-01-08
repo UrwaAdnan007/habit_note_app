@@ -4,10 +4,16 @@ import 'package:habit_app/core/constants/app_colors.dart';
 import 'package:habit_app/features/note_editor/presentation/widgets/color_filter_shape.dart';
 
 class FilterByColourWidget extends StatelessWidget {
-  FilterByColourWidget({super.key, required this.onTap, this.backgroundColor});
+  FilterByColourWidget(
+      {super.key,
+      required this.onTap,
+      this.backgroundColor,
+      required this.onColorTap});
 
   final VoidCallback onTap;
   final Color? backgroundColor;
+  final ValueChanged<Color> onColorTap; // Callback to return selected color
+
   List<Color> choiceColors = [
     AppColors.choiceColor1,
     AppColors.choiceColor2,
@@ -32,7 +38,7 @@ class FilterByColourWidget extends StatelessWidget {
       elevation: 4,
       titleTextStyle: GoogleFonts.roboto(
           color: AppColors.blackColor,
-          fontSize: 24,
+          fontSize: 19,
           fontWeight: FontWeight.w400),
       titlePadding: const EdgeInsets.only(
         left: 29,
@@ -58,28 +64,34 @@ class FilterByColourWidget extends StatelessWidget {
               'Reset',
               style: TextStyle(
                   fontFamily: 'Roboto',
-                  fontSize: 18,
+                  fontSize: 15,
                   fontWeight: FontWeight.w400),
             ),
           ),
         ),
         const SizedBox(
-          height: 22,
+          height: 20,
         ),
         SizedBox(
           width: 300,
           height: 240,
           child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              childAspectRatio: (width / (height / 4.5)),
-              crossAxisSpacing: 12,
-              mainAxisSpacing: 22,
-            ),
-            itemCount: choiceColors.length,
-            itemBuilder: (context, index) =>
-                ColorFilterShape(choicecolors: choiceColors[index]),
-          ),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                childAspectRatio: (width / (height / 4.5)),
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 22,
+              ),
+              itemCount: choiceColors.length,
+              itemBuilder: (context, index) {
+                return GestureDetector(
+                  onTap: () {
+                    onColorTap(choiceColors[index]);
+                    Navigator.pop(context);
+                  },
+                  child: ColorFilterShape(choicecolors: choiceColors[index]),
+                );
+              }),
         )
       ],
     );

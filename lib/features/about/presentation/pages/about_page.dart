@@ -28,14 +28,14 @@ class AboutPage extends StatelessWidget {
                             'About',
                             style: GoogleFonts.roboto(
                               color: AppColors.blackColor,
-                              fontSize: 21.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
                           leading: IconButton(
                             icon: const Icon(
                               Icons.arrow_back,
-                              size: 24,
+                              size: 18,
                               color: AppColors.blackColor,
                             ),
                             onPressed: () => Navigator.pop(context),
@@ -43,7 +43,7 @@ class AboutPage extends StatelessWidget {
                     ),
                     Image.asset(
                       'assets/images/app_logo.png',
-                      width: 150,
+                      width: 110,
                     ),
                   ],
                 ),

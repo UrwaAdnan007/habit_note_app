@@ -31,7 +31,7 @@ class HelpPage extends StatelessWidget {
                           'Help',
                           style: GoogleFonts.roboto(
                             color: AppColors.blackColor,
-                            fontSize: 25.0,
+                            fontSize: 20.0,
                             fontWeight: FontWeight.w400,
                             // height: 19.2,
                           ),
@@ -49,7 +49,7 @@ class HelpPage extends StatelessWidget {
                         'User Guide',
                         style: GoogleFonts.roboto(
                           color: AppColors.whiteColor,
-                          fontSize: 31.0,
+                          fontSize: 26.0,
                           fontWeight: FontWeight.w400,
                           // height: 19.2,
                         ),

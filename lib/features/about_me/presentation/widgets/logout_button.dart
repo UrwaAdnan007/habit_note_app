@@ -44,7 +44,7 @@ class LogOutButton extends StatelessWidget {
           children: [
             const Icon(
               Icons.logout_outlined,
-              size: 36,
+              size: 30,
               color: AppColors.whiteColor,
             ),
             const SizedBox(
@@ -58,7 +58,7 @@ class LogOutButton extends StatelessWidget {
               style: GoogleFonts.roboto(
                 color:
                     color == null ? AppColors.whiteColor : AppColors.appColor,
-                fontSize: 18.0,
+                fontSize: 12.0,
                 fontWeight: FontWeight.w400,
                 // height: 19.2,
               ),

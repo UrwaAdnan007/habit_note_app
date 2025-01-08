@@ -53,14 +53,14 @@ class AuthPageHeader extends StatelessWidget {
                 title,
                 style: GoogleFonts.roboto(
                     fontWeight: FontWeight.w700,
-                    fontSize: 18,
+                    fontSize: 15,
                     color: AppColors.blackColor),
               ),
               Text(
                 subtitle,
                 style: GoogleFonts.roboto(
                     fontWeight: FontWeight.w300,
-                    fontSize: 18,
+                    fontSize: 15,
                     color: AppColors.blackColor),
               ),
             ],

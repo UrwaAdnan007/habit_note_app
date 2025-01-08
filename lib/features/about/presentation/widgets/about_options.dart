@@ -23,14 +23,14 @@ class AboutOptions extends StatelessWidget {
                 "Application",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 16,
+                    fontSize: 13,
                     fontWeight: FontWeight.w400),
               ),
               trailing: Text(
                 "HaBIT Note",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 16,
+                    fontSize: 13,
                     fontWeight: FontWeight.w300),
               ),
             ),
@@ -40,14 +40,14 @@ class AboutOptions extends StatelessWidget {
                 "Version",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 16,
+                    fontSize: 13,
                     fontWeight: FontWeight.w400),
               ),
               trailing: Text(
                 "V1.0.0",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 16,
+                    fontSize: 13,
                     fontWeight: FontWeight.w300),
               ),
             ),
@@ -58,7 +58,7 @@ class AboutOptions extends StatelessWidget {
                 "Privacy Policy",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 16,
+                    fontSize: 13,
                     fontWeight: FontWeight.w400),
               ),
             ),
@@ -69,7 +69,7 @@ class AboutOptions extends StatelessWidget {
                 "Terms of Use",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 16,
+                    fontSize: 13,
                     fontWeight: FontWeight.w400),
               ),
             ),

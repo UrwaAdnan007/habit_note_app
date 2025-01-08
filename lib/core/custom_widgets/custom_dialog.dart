@@ -32,7 +32,7 @@ class MyCustomDialog extends StatelessWidget {
       insetPadding: const EdgeInsets.all(35.0),
       titleTextStyle: GoogleFonts.roboto(
           color: AppColors.blackColor,
-          fontSize: 24,
+          fontSize: 20,
           fontWeight: FontWeight.w500),
       titlePadding: const EdgeInsets.only(top: 2),
       backgroundColor: backgroundColor ?? AppColors.whiteColor,
@@ -43,7 +43,7 @@ class MyCustomDialog extends StatelessWidget {
           child: Row(
             children: [
               ConstrainedBox(
-                  constraints: const BoxConstraints(maxHeight: 30),
+                  constraints: const BoxConstraints(maxHeight: 25),
                   child: Image.asset(option1Icon)),
               Padding(
                 padding: const EdgeInsets.only(left: 16.0),
@@ -51,7 +51,7 @@ class MyCustomDialog extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   option1text,
                   style: GoogleFonts.roboto(
-                      fontSize: 20, fontWeight: FontWeight.w400),
+                      fontSize: 17, fontWeight: FontWeight.w400),
                 ),
               )
             ],
@@ -62,7 +62,7 @@ class MyCustomDialog extends StatelessWidget {
           child: Row(
             children: [
               ConstrainedBox(
-                constraints: const BoxConstraints(maxHeight: 30),
+                constraints: const BoxConstraints(maxHeight: 25),
                 child: Image.asset(
                   option2Icon,
                 ),
@@ -73,7 +73,7 @@ class MyCustomDialog extends StatelessWidget {
                   option2text,
                   overflow: TextOverflow.ellipsis,
                   style: GoogleFonts.roboto(
-                      fontSize: 20, fontWeight: FontWeight.w400),
+                      fontSize: 17, fontWeight: FontWeight.w400),
                 ),
               )
             ],

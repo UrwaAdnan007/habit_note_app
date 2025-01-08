@@ -28,7 +28,7 @@ class DrawerWidget extends StatelessWidget {
                 //   ),
                 // ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 60, top: 20),
+                  padding: const EdgeInsets.only(left: 60, top: 90, bottom: 10),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -36,14 +36,14 @@ class DrawerWidget extends StatelessWidget {
                         'HaBIT Note',
                         style: GoogleFonts.fugazOne(
                             fontWeight: FontWeight.w400,
-                            fontSize: 24,
+                            fontSize: 26,
                             color: AppColors.blackColor),
                       ),
                       Text(
                         'V1.0.0',
                         style: GoogleFonts.roboto(
                             fontWeight: FontWeight.w400,
-                            fontSize: 18,
+                            fontSize: 20,
                             color: AppColors.blackColor),
                       ),
                     ],
@@ -52,12 +52,12 @@ class DrawerWidget extends StatelessWidget {
                 const Divider(
                   color: Colors.black,
                   height: 20,
-                  thickness: 0.5,
+                  thickness: 0.8,
                   indent: 0,
                   endIndent: 0,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 60),
+                  padding: const EdgeInsets.only(left: 60, top: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -70,33 +70,57 @@ class DrawerWidget extends StatelessWidget {
                                 builder: (context) =>
                                     const ForgetPasswordPage()),
                           ),
-                          child: Text(
-                            'Forgot Password',
-                            style: GoogleFonts.roboto(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 18,
-                                color: AppColors.blackColor),
+                          child: Row(
+                            children: [
+                              const Icon(Icons.lock),
+                              const SizedBox(
+                                width: 8,
+                              ),
+                              Text(
+                                'Forgot Password',
+                                style: GoogleFonts.roboto(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 19,
+                                    color: AppColors.blackColor),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: Text(
-                          'Privacy Policy',
-                          style: GoogleFonts.roboto(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 18,
-                              color: AppColors.blackColor),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.admin_panel_settings_rounded),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'Privacy Policy',
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 19,
+                                  color: AppColors.blackColor),
+                            ),
+                          ],
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: Text(
-                          'Terms of Use',
-                          style: GoogleFonts.roboto(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 18,
-                              color: AppColors.blackColor),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.description),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'Terms of Use',
+                              style: GoogleFonts.roboto(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 19,
+                                  color: AppColors.blackColor),
+                            ),
+                          ],
                         ),
                       ),
                     ],

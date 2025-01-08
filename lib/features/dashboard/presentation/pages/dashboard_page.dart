@@ -17,7 +17,7 @@ class _DashboardPageState extends State<DashboardPage> {
   int _selectedIndex = 0;
   final List<Widget> pages = [
     const NoteEditorPage(),
-    const OcrPage(),
+    OcrPage(),
     const HelpPage(),
     const AboutMePage(),
   ];

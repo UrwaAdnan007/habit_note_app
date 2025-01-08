@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:habit_app/core/constants/app_colors.dart';
 
 class ColorPickerShape extends StatelessWidget {
-  ColorPickerShape({super.key, required this.choicecolors});
+  const ColorPickerShape({
+    super.key,
+    required this.choicecolors,
+    required this.onTap,
+  });
   final Color choicecolors;
-  Color currentColor = AppColors.choiceColor1;
+  final VoidCallback onTap; // To handle the tap event
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +19,7 @@ class ColorPickerShape extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            onTap: () {},
+            onTap: onTap,
             borderRadius: BorderRadius.circular(50),
             child: AnimatedOpacity(
               duration: const Duration(milliseconds: 210),
@@ -24,7 +27,7 @@ class ColorPickerShape extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: AppColors.blackColor, width: 1)),
+                    border: Border.all(color: Colors.grey)),
               ),
             ),
           ),

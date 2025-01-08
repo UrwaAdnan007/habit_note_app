@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -16,12 +17,15 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(
-      const Duration(seconds: 4),
-      () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const OnboardingMainPage()),
-      ),
+    _navigateToAuthWrapper();
+  }
+
+  Future<void> _navigateToAuthWrapper() async {
+    // Splash screen delay for 2 seconds
+    await Future.delayed(const Duration(seconds: 4));
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => AuthWrapper()),
     );
   }
 
@@ -64,6 +68,24 @@ class _SplashPageState extends State<SplashPage> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class AuthWrapper extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<User?>(
+      future: FirebaseAuth.instance.authStateChanges().first,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasData) {
+          return const DashboardPage(); // If user is logged in
+        } else {
+          return const OnboardingMainPage(); // If user is not logged in
+        }
+      },
     );
   }
 }

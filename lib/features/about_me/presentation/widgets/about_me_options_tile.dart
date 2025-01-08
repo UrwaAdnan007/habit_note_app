@@ -21,40 +21,12 @@ class AboutMeOptionsTile extends StatelessWidget {
         children: [
           ListTile(
               minTileHeight: 40,
-              onTap: onTapArchiveNotes,
-              title: const Text(
-                "Archive notes",
-                style: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400),
-              ),
-              leading: const Icon(
-                Icons.archive_outlined,
-                color: AppColors.blackColor,
-              )),
-          ListTile(
-              minTileHeight: 40,
-              onTap: onTapSettings,
-              title: const Text(
-                "Settings",
-                style: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400),
-              ),
-              leading: const Icon(
-                Icons.settings,
-                color: AppColors.blackColor,
-              )),
-          ListTile(
-              minTileHeight: 40,
               onTap: onTapResetPassword,
               title: const Text(
                 "Reset Password",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w400),
               ),
               leading: const Icon(
@@ -68,7 +40,7 @@ class AboutMeOptionsTile extends StatelessWidget {
                 "About",
                 style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 18,
+                    fontSize: 15,
                     fontWeight: FontWeight.w400),
               ),
               leading: const Icon(
